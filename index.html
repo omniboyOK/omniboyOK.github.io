@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <link rel="icon" href="./icon.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Omniboy Web Developer</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="js/jquery-3.4.1.js"></script>
+    <link rel="stylesheet" href="Semantic-UI-CSS-master/semantic.css">
+</head>
+
+<body>
+    <!-- El contenedor de nuestra pagina-->
+    <div class="page">
+        <!-- Header -->
+        <header role="banner">
+            <div class="ui header container">
+
+                <div id="mobile-button">
+                    <i class="big bars icon"></i>
+                </div>
+                <!-- Menu de navegacion -->
+                <div id="menu">
+                    <!-- Menu principal -->
+                    <ul id="nav" class="ui text menu">
+                        <li class="item active" data-tab="home">
+                            <a>Home</a>
+                        </li>
+                        <li class="item" data-tab="resume">
+                            <a>Curriculum</a>
+                        </li>
+                        <li class="item" data-tab="portfolio">
+                            <a>Portfolio</a>
+                        </li>
+                        <li class="item" data-tab="contact">
+                            <a>Contacto</a>
+                        </li>
+                        <!--
+                        <li class="item" data-tab="services">
+                            <a>Servicios</a>
+                        </li>
+
+                        <li class="item" data-tab="blog">
+                            <a>Blog</a>
+                        </li>
+
+                        <li class="item" data-tab="arcade">
+                            <a>Arcade</a>
+                        </li>
+                        -->
+                    </ul>
+                    <!-- /Main menu -->
+                </div>
+            </div>
+        </header>
+        <!-- /Header -->
+
+        <!-- Menu para celular, este menu esta fuera del header, oculto-->
+        <div class="ui" id="menu-mobile">
+            <!-- Menu principal -->
+            <ul class="ui text mmenu">
+                <br>
+                <li class="item active" data-tab="home">
+                    <a>Home</a>
+                </li>
+                <li class="item" data-tab="resume">
+                    <a>Curriculum</a>
+                </li>
+                <li class="item" data-tab="portfolio">
+                    <a>Portfolio</a>
+                </li>
+                <li class="item" data-tab="contact">
+                    <a>Contacto</a>
+                </li>
+                <!--
+                <li class="item" data-tab="services">
+                    <a>Servicios</a>
+                </li>
+
+                <li class="item" data-tab="blog">
+                    <a>Blog</a>
+                </li>
+
+                <li class="item" data-tab="arcade">
+                    <a>Arcade</a>
+                </li>
+                -->
+
+            </ul>
+            <!-- /Main menu -->
+        </div>
+        <!-- Subpagina, son las secciones de nuestra pagina-->
+        <div class="subpage ui container" role="main">
+
+            <!-- Seccion de la Home -->
+            <section class="ui transition scale in tab active" data-tab="home" id="home">
+                <div class="header">
+                    <div class="ui grid">
+                        <div class="ui eight wide column">
+                            <img alt="Autoretrato dibujado por mi" src="images/portrait.png" id="pic">
+                        </div>
+                        <div class="ui eight wide column">
+                            <div>
+                                <h1>Barrea Pablo</h1>
+                                <h3>Web developer / Indie game dev</h2>
+                                    <br>
+                                    <a href="http://www.linkedin.com/in/pablo-barrea-75696416a" target="_blank">
+                                        <i class="linkedin icon"></i>
+                                    </a>
+                                    <a href="https://www.github.com/omniboyok" target="_blank">
+                                        <i class="github icon"></i>
+                                    </a>
+                                    <a href="https://www.deviantart.com/pixelcard" target="_blank">
+                                        <i class="deviantart icon"></i>
+                                    </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="body">
+                    <div class="ui grid">
+                        <div class="ui eight wide column">
+                            <h1>Sobre Mí</h1>
+                            <p>Hola!
+                                <br>
+                                Me llamo Pablo y soy desarrollador
+                                <br>
+                                Me especializo en programación web y desarrollo de juegos
+                                <br>
+                                Podes leer más de mí en mi curriculum.
+                            </p>
+                            <div class="ui button ">
+                                <i class="download icon"></i>
+                                <a href="./FullStackDev_Pablo_Barrea.pdf" download>Descargar CV
+                                </a>
+                            </div>
+                        </div>
+                        <div class="ui eight wide column">
+                            <ul class="info-list">
+                                <li>29 Años</li>
+                                <li>CABA, Buenos Aires, Argentina</li>
+                                <li><span class="value"><a
+                                            href="mailto:barrea.pablo@gmail.com">barrea.pablo@gmail.com</a></span></li>
+                                <li>Disponible para trabajos freelance</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Seccion del curriculum-->
+            <section class="ui transition scale in tab" data-tab="resume" id="resume">
+                <div class="header">
+                    Curriculum
+                </div>
+                <div class="body">
+
+                    <div class="ui grid">
+                        <!-- Educación y Experiencia-->
+                        <div class="row">
+                            <div class="ui eight wide column">
+                                <div id="educacion">
+                                    <h2>Educación</h2>
+                                    <ul>
+                                        <li>
+                                            <h3>Desarrollor React</h3>
+                                            <span class="exp-name">Autodidacta</span>
+                                            <span class="exp-year">Desde 2019</span>
+                                        </li>
+                                        <li>
+                                            <h3>Desarrollo Web Fullstack</h3>
+                                            <span class="exp-name">ACAMICA</span>
+                                            <span class="exp-year">2019-2020</span>
+                                        </li>
+                                        <li>
+                                            <h3>Programacion Java SE 7</h3>
+                                            <span class="exp-name">IT Master S.R.L.</span>
+                                            <span class="exp-year">2018-2019</span>
+                                        </li>
+                                        <li>
+                                            <h3>Técnico Químico</h3>
+                                            <span class="exp-name">Escuela Técnica Nº8 Paula Albarracin</span>
+                                            <span class="exp-year">2004-2009</span>
+                                        </li>
+                                        <li>
+                                            <h3>Inglés</h3>
+                                            <span class="exp-name">C.E.C.I.E. Nº 20 Escuela Martin Luther King</span>
+                                            <span class="exp-year">2001-2006 </span>
+                                        </li>
+
+
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="ui eight wide column">
+                                <div id="experiencia">
+                                    <h2>Experiencia</h2>
+                                    <ul>
+                                        <li>
+                                            <h3>Desarrollador Full Stack Ssr.</h3>
+                                            <span class="exp-name">Treggo Co.</span>
+                                            <span class="exp-year">Junio 2020 - Actualidad</span>
+                                            <p> Migración de interfaz de clientes a React.
+                                                Refactorización y creación de endpoints en servidor Express y MongoDB.
+                                                Tareas menores de mantenimiento de servidor Linux / NGINX.
+                                            </p>
+                                        </li>
+                                        <br>
+                                        <li>
+                                            <h3>Desarrollador Full Stack Jr.</h3>
+                                            <span class="exp-name">Kwikvet</span>
+                                            <span class="exp-year">Enero 2020 - Junio 2020</span>
+
+                                            <p> Desarrollo de aplicación web administrativa con React, servidor Express
+                                                y base de datos MySQL.
+                                            </p>
+                                        </li>
+                                        <br>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Conocimientos -->
+                        <h2>Conocimientos</h2>
+                        <div class="row">
+                            <div class="ui eight wide column">
+                                <ul>
+                                    <li><i class="code icon"></i>Git</li>
+                                    <li><i class="code icon"></i>Javascript (ECMA5/ECMA6)</li>
+                                    <li><i class="code icon"></i>HTML5</li>
+                                    <li><i class="code icon"></i>CSS3</li>
+                                    <li><i class="code icon"></i>JAVA SE7/SE8</li>
+                                    <li><i class="code icon"></i>React.js</li>
+                                </ul>
+                            </div>
+                            <div class="ui eight wide column">
+                                <ul>
+                                    <li><i class="server icon"></i>Nginx</li>
+                                    <li><i class="server icon"></i>Heroku</li>
+                                    <li><i class="server icon"></i>MySQL</li>
+                                    <li><i class="server icon"></i>MongoDB</li>
+                                    <li><i class="ui paint brush icon"></i>Illustrator</li>
+                                    <li><i class="paint brush icon"></i>Photoshop</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <section class="ui transition scale in tab" data-tab="portfolio" id="portfolio">
+                <div class="header">
+                    Portfolio
+                </div>
+                <div class="body">
+                    <div class="port-title">
+                        <h2>Programación</h2>
+                    </div>
+                    <div class="ui three cards" id="testing">
+
+                        <div class="ui green card">
+                            <div class="content">
+                                <div class="">
+                                    <h3>Tateti en Java</h3>
+                                </div>
+                                <div class="description">
+                                    Juego hecho en Java con interfaz hecha en Swing.
+                                    Este prototipo realizado con programación orientada a objetos,
+                                    contiene un indicador de jugador y condiciones de victoria.
+                                </div>
+                            </div>
+                            <div class="image">
+                                <img src="./images/tatetijava_thumb.png" alt="" id="java_thumb">
+                            </div>
+                            <div class="extra content">
+                                <a href="https://github.com/omniboyOK/java-ta-te-ti">
+                                    <div class="ui fluid green button">
+                                        Ver más
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="ui green card">
+                            <div class="content">
+                                <div class="">
+                                    <h3>Tateti en Javascript</h3>
+                                </div>
+                                <div class="description">
+                                    Juego hecho en javascript con la libreria PandaJS.
+                                    Es un prototipo básico sin condiciones de victoria.
+                                </div>
+                            </div>
+                            <div class="image">
+                                <img src="./images/tatetijs_thumb.png" alt="" id="js_thumb">
+                            </div>
+                            <div class="extra content">
+                                <a href="https://github.com/omniboyOK/tic-tac-toe-js">
+                                    <div class="ui fluid green button">
+                                        Ver más
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="ui green card">
+                            <div class="content">
+                                <div class="">
+                                    <h3>Bot de Telegram</h3>
+                                </div>
+                                <div class="description">
+                                    Juego rpg para usuarios de Telegram.
+                                    <br>
+                                    Genera personajes a una base de datos en sql y acepta pedidos
+                                    de batalla entre usuarios.
+                                </div>
+                            </div>
+                            <div class="image">
+                                <img src="./images/telegrambot_thumb.png" alt="" id="telegram_thumb">
+                            </div>
+                            <div class="extra content">
+                                <a href="https://github.com/omniboyOK/Telegram-Java-Template-Espanol">
+                                    <div class="ui fluid green button">
+                                        Ver más
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="port-title">
+                        <h2>Desarrollo Web</h2>
+                    </div>
+                    <div class="ui three cards">
+                        <div class="ui green card">
+                            <div class="content">
+                                <div class="">
+                                    <h3>Netflix</h3>
+                                </div>
+                                <div class="description">
+                                    Imitación de la web Netflix en Nodejs y Express, con catalogo de peliculas usando la
+                                    API de moviedb
+                                </div>
+                            </div>
+                            <div class="ui image">
+                                <img src="./images/netflix.png">
+                            </div>
+                            <div class="extra content">
+                                <a href="https://netflix-mockup.herokuapp.com">
+                                    <div class="ui fluid green button">
+                                        Ver más
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="ui green card">
+                            <div class="content">
+                                <div class="">
+                                    <h3>Reserva de masajes</h3>
+                                </div>
+                                <div class="description">
+                                    Aplicación en React que administra reservaciones para masajes. Los datos se
+                                    guardan de manera local.
+                                </div>
+                            </div>
+                            <div class="ui image">
+                                <img src="./images/masseur.png">
+                            </div>
+                            <div class="extra content">
+                                <a href="https://masseur-agenda.herokuapp.com">
+                                    <div class="ui fluid green button">
+                                        Ver más
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="ui green card">
+                            <div class="content">
+                                <div class="">
+                                    <h3>Noticias Destacadas</h3>
+                                </div>
+                                <div class="description">
+                                    Aplicación en React junto con la API del New York Times, que muestra y filtra las
+                                    noticias destacadas de cada categoria
+                                </div>
+                            </div>
+                            <div class="ui image">
+                                <img src="./images/news.png">
+                            </div>
+                            <div class="extra content">
+                                <a href="https://react-news-omniboy.herokuapp.com">
+                                    <div class="ui fluid green button">
+                                        Ver más
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="ui green card">
+                            <div class="content">
+                                <div class="">
+                                    <h3>Pokedex Web</h3>
+                                </div>
+                                <div class="description">
+                                    Ejemplo de manejo de API.
+                                    Realice el diseño de esta web para mi clase de desarrollo full-stack,
+                                    es una Pokedex que consulta los datos de los distintos pokemons en la web
+                                    PokeAPI.
+                                </div>
+                            </div>
+                            <div class="ui image">
+                                <img src="./images/pokedex.png">
+                            </div>
+                            <div class="extra content">
+                                <a href="https://pokedex.omniboydev.com">
+                                    <div class="ui fluid green button">
+                                        Ver más
+                                    </div>
+                                </a>
+
+                            </div>
+                        </div>
+                        <div class="ui green card">
+                            <div class="content">
+                                <div class="">
+                                    <h3>Concesionaria</h3>
+                                </div>
+                                <div class="description">
+                                    Prototipo basico de consola para agregado items y calculo de precios.
+                                </div>
+                            </div>
+                            <div class="ui image">
+                                <img src="./images/concesionaria.png">
+                            </div>
+                            <div class="extra content">
+                                <a href="https://omniboy-consecionaria.herokuapp.com">
+                                    <div class="ui fluid green button">
+                                        Ver más
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="ui green card">
+                            <div class="content">
+                                <div class="">
+                                    <h3>RPG Web</h3>
+                                </div>
+                                <div class="description">
+                                    Juego de Rol realizado en javascript y html5, utilizando el framework
+                                    semantic-ui y animaciones en jquery.
+                                    Contiene seleccion de personaje con diferentes habilidades.
+                                </div>
+                            </div>
+                            <div class="ui image">
+                                <img src="./images/rpgweb.png">
+                            </div>
+                            <div class="extra content">
+                                <a href="https://rpg.omniboydev.com">
+                                    <div class="ui fluid green button">
+                                        Ver más
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="ui green card">
+                            <div class="content">
+                                <div class="">
+                                    <h3>Rompecabezas Web</h3>
+                                </div>
+                                <div class="description">
+                                    Juego de rompecabezas realizado para la clase de desarrollador full-stack.
+                                </div>
+                            </div>
+                            <div class="ui image">
+                                <img src="./images/puzzle.png">
+                            </div>
+                            <div class="extra content">
+                                <a href="https://puzzle.omniboydev.com">
+                                    <div class="ui fluid green button">
+                                        Ver más
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="port-title">
+                        <h2>Diseño de juegos</h2>
+                    </div>
+                    <div class="ui three cards">
+
+                        <div class="ui green card">
+                            <div class="content">
+                                <div class="">
+                                    <h3>Juego HTML5</h3>
+                                </div>
+                                <div class="description">
+                                    Juego realizado en Construct2, con plugins en javascript.
+                                    Se encuentra publicado en la plataforma de google play,
+                                    con anuncios integrados por medio de la api de admob.
+                                </div>
+                            </div>
+                            <div class="image">
+                                <img src="./images/cat_thumb.png" alt="" id="cat_thumb">
+                            </div>
+                            <div class="extra content">
+                                <a href="https://omniboyok.itch.io/catjob">
+                                    <div class="ui fluid green button">
+                                        Ver más
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="ui green card">
+                            <div class="content">
+                                <div class="">
+                                    <h3>Emojis en Pixel-Art</h3>
+                                </div>
+                                <div class="description">
+                                    Pack de emoticones para la aplicación Discord.
+                                    Trabajo realizado para la comunidad de Overwatch y
+                                    disponible en mi tienda de Itch.io
+                                </div>
+                            </div>
+                            <div class="image">
+                                <img src="./images/emoji_thumb.png" alt="" id="emoji_thumb">
+                            </div>
+                            <div class="extra content">
+                                <a href="https://omniboyok.itch.io/overwatch-discord-emoji">
+                                    <div class="ui fluid green button">
+                                        Ver más
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="ui green card">
+                            <div class="content">
+                                <div class="">
+                                    <h3>Diseño de personaje</h3>
+                                </div>
+                                <div class="description">
+                                    Ilustración de personaje con la tematica del juego Darkest Dungeon.
+                                </div>
+                            </div>
+                            <div class="image">
+                                <img src="./images/mockup_thumb.png" alt="" id="mockup_thumb">
+                            </div>
+                            <div class="extra content">
+                                <a
+                                    href="https://www.deviantart.com/pixelcard/art/Invoker-Darkest-Dungeon-Hero-783370974">
+                                    <div class="ui fluid green button">
+                                        Ver más
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="ui transition scale in tab" data-tab="contact" id="contact">
+                <div class="header">
+                    Contacto
+                </div>
+                <div class="body">
+
+                    <!-- Contact Subpage -->
+                    <div class="section-inner custom-page-content">
+                        <div class="ui grid">
+                            <!-- <div class="ui eight wide column">
+                                <h3>Mi localidad</h3>
+
+                                <div class="ui segment">
+                                    <h5>Mataderos, CABA, Argentina</h5>
+                                    <div id="map"></div>
+                                </div>
+                            </div> -->
+                            <div class="ui four wide column"></div>
+                            <div class="ui eight wide column" id="contact-form">
+                                <h3>Formulario de contacto</h3>
+                                <form class="ui form" method="POST" action="https://omniboy-mailer.herokuapp.com/send"
+                                    id="form">
+                                    <div class="field">
+                                        <label>Nombre</label>
+                                        <input type="text" name="name" placeholder="Nombre" id="form-name" required>
+                                    </div>
+                                    <div class="field">
+                                        <label>Apellido</label>
+                                        <input type="text" name="surname" placeholder="Apellido" id="form-surname" required>
+                                    </div>
+                                    <div class="field">
+                                        <label>Email</label>
+                                        <input type="email" name="_replyto" placeholder="Email" id="form-email" required>
+                                    </div>
+                                    <div class="ui field">
+                                        <label>Mensaje</label>
+                                        <input type="text" name="message" placeholder="Escribe Aqui" maxlength="400"
+                                            id="form-msg" required>
+                                    </div>
+                                    <input class="ui button" type="submit" value="Enviar"></input>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Contact Subpage -->
+                </div>
+            </section>
+
+        </div>
+        <!-- Subpagina-->
+        <!--Page-->
+    </div>
+
+    <!-- scripts necesarios-->
+    <script src="js/index.js"></script>
+    <script src="Semantic-UI-CSS-master/semantic.js"></script>
+    <script async defer id="gmap"
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD3G05Vp2QOpozeIfyOTDALJQxaDPiV2_w&callback=initMap"></script>
+    <!-- /scripts-->
+</body>
+
+</html>
