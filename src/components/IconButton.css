@@ -1,0 +1,55 @@
+.icon-button {
+  position: relative;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: transform 0.2s;
+  background-image: url('../assets/board-info/png/fantasy_double/blank_panel.png');
+}
+
+.icon-button:hover {
+  transform: scale(1.05);
+}
+
+.icon-button-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.button-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.icon-container {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-container svg {
+  width: 100%;
+  height: 100%;
+}
+
+.button-label {
+  position: relative;
+  z-index: 2;
+  margin-top: 5px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: #000;
+  text-align: center;
+}
