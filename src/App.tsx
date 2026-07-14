@@ -3,7 +3,6 @@ import { Header } from './components/Header';
 import { Home } from './components/Home';
 import { Resume } from './components/Resume';
 import { Portfolio } from './components/Portfolio';
-import { Contact } from './components/Contact';
 
 function App() {
   const [activeTab, setActiveTab] = useState<string>('home');
@@ -16,8 +15,6 @@ function App() {
         return <Resume />;
       case 'portfolio':
         return <Portfolio />;
-      case 'contact':
-        return <Contact />;
       default:
         return <Home onNavigateToResume={() => setActiveTab('resume')} />;
     }

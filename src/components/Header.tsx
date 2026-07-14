@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Menu, X, Home as HomeIcon, FileText, Briefcase, Mail } from 'lucide-react';
+import { Menu, X, Home as HomeIcon, FileText, Briefcase } from 'lucide-react';
 
 interface HeaderProps {
   activeTab: string;
@@ -13,7 +13,6 @@ export const Header: React.FC<HeaderProps> = ({ activeTab, setActiveTab }) => {
     { id: 'home', label: 'Home', icon: <HomeIcon size={18} /> },
     { id: 'resume', label: 'Curriculum', icon: <FileText size={18} /> },
     { id: 'portfolio', label: 'Portfolio', icon: <Briefcase size={18} /> },
-    { id: 'contact', label: 'Contacto', icon: <Mail size={18} /> },
   ];
 
   const handleNavClick = (tabId: string) => {
