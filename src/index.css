@@ -816,6 +816,72 @@ a {
   font-size: 1rem;
 }
 
+.item-description-list {
+  margin: 0;
+  padding-left: 20px;
+  font-size: 0.95rem;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.item-description-list li {
+  line-height: 1.4;
+}
+
+/* Logo Avatar Styles */
+.logo-avatar {
+  width: 32px;
+  height: 32px;
+  min-width: 32px;
+  border: 2px solid var(--color-border);
+  border-radius: 6px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  box-shadow: 2px 2px 0px var(--color-border);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+.logo-avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 2px;
+  border-radius: 4px;
+}
+
+.fallback-avatar {
+  background-color: var(--primary-light);
+  color: var(--primary);
+}
+
+.soccer-avatar {
+  background-color: #ffd166;
+  font-size: 1.1rem;
+}
+
+.company-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.institution-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 6px;
+}
+
+.institution-container .item-subtitle {
+  margin: 0;
+}
+
 /* Skills Section Styles */
 .skills-card-section {
   text-align: center;

@@ -1,73 +1,140 @@
 import React from 'react';
 import { Calendar, Briefcase, GraduationCap, Code } from 'lucide-react';
 
+// Import local logo assets
+import acamicaLogo from '../assets/logos/acamica.png';
+import carrytLogo from '../assets/logos/carryt.png';
+import faltaUnoLogo from '../assets/logos/falta-uno.png';
+import itmasterLogo from '../assets/logos/itmaster.png';
+import personalLogo from '../assets/logos/personal.png';
+import siglo21Logo from '../assets/logos/siglo21.png';
+
+interface LogoAvatarProps {
+  logo?: string;
+  fallbackText: string;
+}
+
+const LogoAvatar: React.FC<LogoAvatarProps> = ({ logo, fallbackText }) => {
+  if (logo) {
+    return (
+      <div className="logo-avatar">
+        <img 
+          src={logo} 
+          alt={`${fallbackText} logo`} 
+          className="logo-avatar-img"
+        />
+      </div>
+    );
+  }
+
+  return (
+    <div className="logo-avatar fallback-avatar">
+      <span>{fallbackText}</span>
+    </div>
+  );
+};
+
 export const Resume: React.FC = () => {
   const education = [
     {
-      title: 'Desarrollador React',
-      institution: 'Autodidacta',
-      period: 'Desde 2019',
+      title: 'Licenciatura en Informática (en curso)',
+      institution: 'Universidad Siglo XXI',
+      period: '2024 - Presente',
+      logo: siglo21Logo,
+      fallbackText: '21',
       color: 'blue-tab'
     },
     {
-      title: 'Desarrollo Web Fullstack',
-      institution: 'ACAMICA',
-      period: '2019 - 2020',
+      title: 'Full Stack Web Developer',
+      institution: 'Acamica',
+      period: '2019',
+      logo: acamicaLogo,
+      fallbackText: 'AC',
       color: 'pink-tab'
     },
     {
-      title: 'Programación Java SE 7',
-      institution: 'IT Master S.R.L.',
+      title: 'Desarrollador Java',
+      institution: 'ITMaster',
       period: '2018 - 2019',
+      logo: itmasterLogo,
+      fallbackText: 'IT',
       color: 'yellow-tab'
-    },
-    {
-      title: 'Técnico Químico',
-      institution: 'Escuela Técnica Nº8 Paula Albarracin',
-      period: '2004 - 2009',
-      color: 'green-tab'
-    },
-    {
-      title: 'Inglés',
-      institution: 'C.E.C.I.E. Nº 20 Escuela Martin Luther King',
-      period: '2001 - 2006',
-      color: 'purple-tab'
     }
   ];
 
   const experience = [
     {
-      role: 'Desarrollador Full Stack Ssr.',
-      company: 'Treggo Co.',
-      period: 'Junio 2020 - Actualidad',
-      description: 'Migración de interfaz de clientes a React. Refactorización y creación de endpoints en servidor Express y MongoDB. Tareas de mantenimiento en servidores Linux y NGINX.',
-      color: 'purple-tab'
+      role: 'Co-fundador y Desarrollador Principal',
+      company: 'Falta Uno',
+      period: 'Junio 2024 - Presente',
+      logo: faltaUnoLogo,
+      fallbackText: 'F1',
+      description: [
+        'Arquitectura y desarrollo completo de la aplicación móvil Falta Uno con React Native para iOS y Android.',
+        'Diseño e implementación de servicios backend con Node.js y Firebase Cloud Functions sobre Google Cloud Platform.',
+        'Gestión del ciclo completo de publicación en App Store y Google Play Store.',
+        'Aplicación de metodologías Ágiles para planificación de sprints e iteración continua sobre el producto.'
+      ],
+      color: 'blue-tab'
     },
     {
-      role: 'Desarrollador Full Stack Jr.',
-      company: 'Kwikvet',
-      period: 'Enero 2020 - Junio 2020',
-      description: 'Desarrollo de aplicación web administrativa con React, servidor Express y base de datos MySQL.',
-      color: 'green-tab'
+      role: 'Desarrollador de Software Senior – Fintech',
+      company: 'Personal (ex Telecom)',
+      period: 'Mayo 2021 - Junio 2024',
+      logo: personalLogo,
+      fallbackText: 'PE',
+      description: [
+        'Desarrollo y mantenimiento de soluciones financieras móviles con React Native en un entorno de alta escala.',
+        'Gestión y optimización de pipelines de CI/CD con GitLab CI y Bitrise, reduciendo los tiempos de release.',
+        'Liderazgo del proceso de revisión de código (Pull Requests) y definición de estándares de desarrollo frontend.',
+        'Trabajo colaborativo con equipos de producto, diseño y QA bajo metodología Ágil/Scrum.'
+      ],
+      color: 'pink-tab'
+    },
+    {
+      role: 'Tech Lead',
+      company: 'Carryt (ex Treggo)',
+      period: 'Junio 2020 - Mayo 2021',
+      logo: carrytLogo,
+      fallbackText: 'CA',
+      description: [
+        'Liderazgo de la migración de paneles legacy de AngularJS a React, mejorando rendimiento y mantenibilidad.',
+        'Desarrollo de herramientas internas de despliegue y mantenimiento con Bash scripting.',
+        'Capacitación y mentoría de desarrolladores junior, unificando prácticas y conocimientos técnicos del equipo.'
+      ],
+      color: 'purple-tab'
     }
   ];
 
   const skills = [
+    // Mobile
+    { name: 'React Native', category: 'mobile', color: '#d91a9c' },
+    { name: 'Expo', category: 'mobile', color: '#3a86c8' },
+    { name: 'iOS & Android', category: 'mobile', color: '#06d6a0' },
     // Frontend
-    { name: 'Git', category: 'tools', color: '#ffd166' },
-    { name: 'Javascript (ES6+)', category: 'frontend', color: '#06d6a0' },
-    { name: 'React.js', category: 'frontend', color: '#d91a9c' },
-    { name: 'HTML5', category: 'frontend', color: '#3a86c8' },
-    { name: 'CSS3', category: 'frontend', color: '#7209b7' },
-    // Backend & DB
-    { name: 'Java SE 7/8', category: 'backend', color: '#06d6a0' },
-    { name: 'Nginx', category: 'backend', color: '#ffd166' },
-    { name: 'MySQL', category: 'backend', color: '#3a86c8' },
-    { name: 'MongoDB', category: 'backend', color: '#d91a9c' },
-    { name: 'Heroku', category: 'tools', color: '#7209b7' },
-    // Design
-    { name: 'Illustrator', category: 'design', color: '#ffd166' },
-    { name: 'Photoshop', category: 'design', color: '#06d6a0' }
+    { name: 'React.js', category: 'frontend', color: '#7209b7' },
+    { name: 'TypeScript', category: 'frontend', color: '#ffd166' },
+    { name: 'JavaScript (ES6+)', category: 'frontend', color: '#06d6a0' },
+    { name: 'HTML5 & CSS3', category: 'frontend', color: '#3a86c8' },
+    // Backend
+    { name: 'Node.js', category: 'backend', color: '#ffd166' },
+    { name: 'NestJS', category: 'backend', color: '#d91a9c' },
+    { name: 'REST APIs & GraphQL', category: 'backend', color: '#7209b7' },
+    // Cloud & DevOps
+    { name: 'Firebase', category: 'cloud', color: '#ffd166' },
+    { name: 'Google Cloud (GCP)', category: 'cloud', color: '#06d6a0' },
+    { name: 'GitLab CI/CD & Bitrise', category: 'devops', color: '#3a86c8' },
+    { name: 'Docker', category: 'devops', color: '#d91a9c' },
+    { name: 'Bash scripting', category: 'tools', color: '#7209b7' },
+    // Databases
+    { name: 'Firestore', category: 'database', color: '#06d6a0' },
+    { name: 'PostgreSQL', category: 'database', color: '#3a86c8' },
+    { name: 'MySQL', category: 'database', color: '#ffd166' },
+    // Architecture & Others
+    { name: 'Clean Architecture', category: 'architecture', color: '#7209b7' },
+    { name: 'Agile / Scrum', category: 'architecture', color: '#d91a9c' },
+    { name: 'Git', category: 'tools', color: '#06d6a0' },
+    { name: 'App Store & Google Play', category: 'tools', color: '#3a86c8' }
   ];
 
   return (
@@ -92,7 +159,10 @@ export const Resume: React.FC = () => {
                   <span>{edu.period}</span>
                 </div>
                 <h4 className="item-title">{edu.title}</h4>
-                <p className="item-subtitle">{edu.institution}</p>
+                <div className="institution-container">
+                  <LogoAvatar logo={edu.logo} fallbackText={edu.fallbackText} />
+                  <p className="item-subtitle">{edu.institution}</p>
+                </div>
               </div>
             ))}
           </div>
@@ -112,10 +182,21 @@ export const Resume: React.FC = () => {
                     <Calendar size={14} />
                     <span>{exp.period}</span>
                   </div>
-                  <span className="company-tag">{exp.company}</span>
+                  <div className="company-container">
+                    <LogoAvatar logo={exp.logo} fallbackText={exp.fallbackText} />
+                    <span className="company-tag">{exp.company}</span>
+                  </div>
                 </div>
                 <h4 className="item-title">{exp.role}</h4>
-                <p className="item-description">{exp.description}</p>
+                {Array.isArray(exp.description) ? (
+                  <ul className="item-description-list">
+                    {exp.description.map((bullet, bIdx) => (
+                      <li key={bIdx}>{bullet}</li>
+                    ))}
+                  </ul>
+                ) : (
+                  <p className="item-description">{exp.description}</p>
+                )}
               </div>
             ))}
           </div>
@@ -143,3 +224,4 @@ export const Resume: React.FC = () => {
     </section>
   );
 };
+
