@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Palette, Download, Mail, MapPin, Calendar, Briefcase } from 'lucide-react';
 import portrait from '../assets/portrait.png';
+import picture from '../assets/picture.png';
 
 interface HomeProps {
   onNavigateToResume: () => void;
@@ -18,6 +19,55 @@ const calculateAge = (birthDateString: string): number => {
 };
 
 export const Home: React.FC<HomeProps> = ({ onNavigateToResume }) => {
+  const [isGlitching, setIsGlitching] = useState(false);
+  const [currentImage, setCurrentImage] = useState(portrait);
+  const [isHovered, setIsHovered] = useState(false);
+
+  const triggerGlitchTransition = (nextImage: string) => {
+    setIsGlitching(true);
+    // Cambiar la imagen a la mitad de la animación glitch (150ms)
+    const switchTimeout = setTimeout(() => {
+      setCurrentImage(nextImage);
+    }, 150);
+
+    // Finalizar el efecto glitch (350ms)
+    const endTimeout = setTimeout(() => {
+      setIsGlitching(false);
+    }, 350);
+
+    return () => {
+      clearTimeout(switchTimeout);
+      clearTimeout(endTimeout);
+    };
+  };
+
+  // Rotación automática cuando NO está en hover
+  useEffect(() => {
+    if (isHovered) return;
+
+    const interval = setInterval(() => {
+      const next = currentImage === portrait ? picture : portrait;
+      triggerGlitchTransition(next);
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, [currentImage, isHovered]);
+
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+    triggerGlitchTransition(picture);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+    triggerGlitchTransition(portrait);
+  };
+
+  const handleClick = () => {
+    const next = currentImage === portrait ? picture : portrait;
+    triggerGlitchTransition(next);
+  };
+
   return (
     <section className="home-section fade-in">
       <div className="grid-2 hero-grid">
@@ -25,12 +75,33 @@ export const Home: React.FC<HomeProps> = ({ onNavigateToResume }) => {
         <div className="hero-visual">
           <div className="sticker-wrapper">
             <div className="splash-bg"></div>
-            <div className="sticker-container">
+            <div 
+              className={`sticker-container glitch-image-container ${isGlitching ? 'is-glitching' : ''}`}
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
+              onClick={handleClick}
+            >
               <img 
-                src={portrait} 
+                src={currentImage} 
                 alt="Retrato de Pablo Barrea" 
-                className="sticker-image hero-portrait"
+                className="sticker-image hero-portrait main-img"
               />
+              {isGlitching && (
+                <>
+                  <img 
+                    src={currentImage} 
+                    alt="" 
+                    className="sticker-image hero-portrait glitch-img glitch-r" 
+                    aria-hidden="true"
+                  />
+                  <img 
+                    src={currentImage} 
+                    alt="" 
+                    className="sticker-image hero-portrait glitch-img glitch-b" 
+                    aria-hidden="true"
+                  />
+                </>
+              )}
               {/* Sticker bubble like the reference */}
               <div className="floating-badge yellow-badge">
                 <span>Indie Dev!</span>
