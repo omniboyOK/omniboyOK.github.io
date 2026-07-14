@@ -121,7 +121,7 @@ export const Home: React.FC<HomeProps> = ({ onNavigateToResume }) => {
               Ver Curriculum
             </button>
             <a 
-              href="./FullStackDev_Pablo_Barrea.pdf" 
+              href="./Pablo_Barrea_ES.pdf" 
               download 
               className="neo-button secondary"
             >
