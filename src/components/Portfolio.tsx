@@ -1,22 +1,18 @@
 import React, { useState } from 'react';
-import { ExternalLink, Code2, Globe, Gamepad2, Layers } from 'lucide-react';
+import { ExternalLink, Trophy, Gamepad2, Layers } from 'lucide-react';
 
 // Import images
-import tatetiJava from '../assets/tatetijava_thumb.png';
-import tatetiJs from '../assets/tatetijs_thumb.png';
-import telegramBot from '../assets/telegrambot_thumb.png';
-import netflix from '../assets/netflix.png';
-import masseur from '../assets/masseur.png';
-import news from '../assets/news.png';
-import concesionaria from '../assets/concesionaria.png';
 import catJob from '../assets/cat_thumb.png';
 import emojiThumb from '../assets/emoji_thumb.png';
 import mockupThumb from '../assets/mockup_thumb.png';
+import faltaUno from '../assets/falta-uno.png';
+import modoMundial from '../assets/modo-mundial.png';
+import semana21FaltaUno from '../assets/semana21-falta-uno.png';
 
 interface Project {
   title: string;
   description: string;
-  category: 'programming' | 'web' | 'game-design';
+  category: 'products' | 'game-design';
   image: string;
   link: string;
   tags: string[];
@@ -27,69 +23,35 @@ export const Portfolio: React.FC = () => {
 
   const categories = [
     { id: 'all', label: 'Todos', icon: <Layers size={16} /> },
-    { id: 'programming', label: 'Programación', icon: <Code2 size={16} /> },
-    { id: 'web', label: 'Desarrollo Web', icon: <Globe size={16} /> },
+    { id: 'products', label: 'Productos & Logros', icon: <Trophy size={16} /> },
     { id: 'game-design', label: 'Diseño de Juegos', icon: <Gamepad2 size={16} /> },
   ];
 
   const projects: Project[] = [
-    // Programación
+    // Productos & Logros
     {
-      title: 'Tateti en Java',
-      description: 'Juego hecho en Java SE con interfaz gráfica en Swing. Contiene indicador de turnos y condiciones de victoria bajo arquitectura orientada a objetos.',
-      category: 'programming',
-      image: tatetiJava,
-      link: 'https://github.com/omniboyOK/java-ta-te-ti',
-      tags: ['Java', 'Swing', 'OOP']
+      title: 'Falta Uno - App & Co-fundador',
+      description: 'Co-creación y desarrollo de una app mobile (Tinder del fútbol) para conectar jugadores y armar partidos. Destacada en medios nacionales por resolver el problema de conseguir jugadores para partidos de fútbol amateur.',
+      category: 'products',
+      image: faltaUno,
+      link: 'https://www.iproup.com/startups/57055-son-argentinos-y-crearon-un-tinder-para-sumar-jugadores-de-futbol',
+      tags: ['React Native', 'Firebase', 'GCP', 'Startup']
     },
     {
-      title: 'Tateti en Javascript',
-      description: 'Prototipo básico de juego Tres en Línea desarrollado con la librería y motor de juegos 2D PandaJS en JavaScript.',
-      category: 'programming',
-      image: tatetiJs,
-      link: 'https://github.com/omniboyOK/tic-tac-toe-js',
-      tags: ['JavaScript', 'PandaJS', 'Gamedev']
+      title: 'Falta Uno en Semana21 (Siglo 21)',
+      description: 'Exposición y pitch de Falta Uno ante profesionales y estudiantes en la Semana21 de la Universidad Siglo 21, destacando la propuesta de valor del producto, la arquitectura y su escalabilidad técnica.',
+      category: 'products',
+      image: semana21FaltaUno,
+      link: 'https://www.iproup.com/startups/57055-son-argentinos-y-crearon-un-tinder-para-sumar-jugadores-de-futbol',
+      tags: ['Universidad Siglo 21', 'Exposición', 'Pitch']
     },
     {
-      title: 'Bot de Telegram RPG',
-      description: 'Bot RPG para Telegram. Permite generar personajes, guardarlos en base de datos SQL y batallar entre usuarios directamente por chat.',
-      category: 'programming',
-      image: telegramBot,
-      link: 'https://github.com/omniboyOK/Telegram-Java-Template-Espanol',
-      tags: ['Java', 'Telegram API', 'SQL']
-    },
-    // Desarrollo Web
-    {
-      title: 'Netflix Mockup',
-      description: 'Copia funcional del catálogo de Netflix desarrollada con Node.js y Express, consultando películas directamente desde la API oficial de TheMovieDB.',
-      category: 'web',
-      image: netflix,
-      link: 'https://github.com/omniboyOK', // link de fallback ya que herokuapp.com puede estar inactivo
-      tags: ['Node.js', 'Express', 'TMDB API']
-    },
-    {
-      title: 'Reserva de Masajes',
-      description: 'Aplicación web construida en React para administrar reservas y turnos de masajes. Los datos persistentes se almacenan localmente.',
-      category: 'web',
-      image: masseur,
-      link: 'https://github.com/omniboyOK',
-      tags: ['React.js', 'Local Storage', 'CSS']
-    },
-    {
-      title: 'Noticias Destacadas NYT',
-      description: 'Aplicación en React conectada con la API pública de The New York Times. Permite filtrar y visualizar noticias relevantes por categorías.',
-      category: 'web',
-      image: news,
-      link: 'https://github.com/omniboyOK',
-      tags: ['React.js', 'NYT API', 'Responsive']
-    },
-    {
-      title: 'Consola Concesionaria',
-      description: 'Prototipo de sistema contable y de inventario para una concesionaria, ejecutado por consola y desarrollado en JavaScript.',
-      category: 'web',
-      image: concesionaria,
-      link: 'https://github.com/omniboyOK',
-      tags: ['Node.js', 'CLI', 'Console']
+      title: 'Enjoy Face - Campaña Modo Mundial',
+      description: 'Implementación y diseño de la campaña interactiva mundialista en la aplicación Enjoy Face, atrayendo usuarios mediante una experiencia futbolera interactiva durante la Copa del Mundo.',
+      category: 'products',
+      image: modoMundial,
+      link: 'https://github.com/omniboyok',
+      tags: ['React Native', 'Modo Mundial', 'Marketing Tecnológico']
     },
     // Gamedev & Design
     {
