@@ -34,7 +34,7 @@ export const Portfolio: React.FC = () => {
       description: 'Co-creación y desarrollo de una app mobile (Tinder del fútbol) para conectar jugadores y armar partidos. Destacada en medios nacionales por resolver el problema de conseguir jugadores para partidos de fútbol amateur.',
       category: 'products',
       image: faltaUno,
-      link: 'https://www.iproup.com/startups/57055-son-argentinos-y-crearon-un-tinder-para-sumar-jugadores-de-futbol',
+      link: 'https://www.faltauno.ar',
       tags: ['React Native', 'Firebase', 'GCP', 'Startup']
     },
     {
@@ -50,7 +50,7 @@ export const Portfolio: React.FC = () => {
       description: 'Implementación y diseño de la campaña interactiva mundialista en la aplicación Enjoy Face, atrayendo usuarios mediante una experiencia futbolera interactiva durante la Copa del Mundo.',
       category: 'products',
       image: modoMundial,
-      link: 'https://github.com/omniboyok',
+      link: 'https://www.enjoyteam.com.ar',
       tags: ['React Native', 'Modo Mundial', 'Marketing Tecnológico']
     },
     // Gamedev & Design
