@@ -125,7 +125,7 @@ export const Home: React.FC<HomeProps> = ({ onNavigateToResume }) => {
           {/* Social Links */}
           <div className="social-links-container">
             <a 
-              href="https://www.linkedin.com/in/pablobarrea" 
+              href="https://www.linkedin.com/in/pablo-barrea" 
               target="_blank" 
               rel="noopener noreferrer"
               className="social-btn linkedin-btn"
