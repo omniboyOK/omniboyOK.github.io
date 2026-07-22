@@ -8,6 +8,8 @@ import mockupThumb from '../assets/mockup_thumb.png';
 import faltaUno from '../assets/falta-uno.png';
 import modoMundial from '../assets/modo-mundial.png';
 import semana21FaltaUno from '../assets/semana21-falta-uno.png';
+import personalPay from '../assets/personal-pay.png';
+import treggoImg from '../assets/treggo.png';
 
 interface Project {
   title: string;
@@ -36,6 +38,22 @@ export const Portfolio: React.FC = () => {
       image: faltaUno,
       link: 'https://www.faltauno.ar',
       tags: ['React Native', 'Firebase', 'GCP', 'Startup']
+    },
+    {
+      title: 'Personal Pay – Billetera Digital Fintech',
+      description: 'Desarrollo y mantenimiento del frontend de la billetera digital Personal Pay (Telecom Argentina) con React Native para iOS y Android. Implementación del flujo de validación de identidad KYC y gestión de pipelines CI/CD con Bitrise, optimizando los ciclos de entrega en un producto de alta escala con millones de usuarios.',
+      category: 'products',
+      image: personalPay,
+      link: 'https://www.personalpay.com.ar',
+      tags: ['React Native', 'KYC', 'CI/CD', 'Bitrise', 'Fintech']
+    },
+    {
+      title: 'Treggo (Carryt) – Plataforma de Logística',
+      description: 'Liderazgo técnico en la migración de más de 5 aplicaciones web legacy de AngularJS a React. Mantenimiento de infraestructura en servidores Linux con NGINX y despliegue en contenedores. Implementación de suites de testing, estándares GitFlow y pipelines de CI/CD para fomentar la autonomía y ownership del equipo en cada despliegue.',
+      category: 'products',
+      image: treggoImg,
+      link: 'https://www.carryt.co',
+      tags: ['React', 'AngularJS', 'Linux', 'NGINX', 'Docker', 'GitFlow', 'CI/CD']
     },
     {
       title: 'Falta Uno en Semana21 (Siglo 21)',

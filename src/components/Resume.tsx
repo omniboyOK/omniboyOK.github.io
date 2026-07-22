@@ -98,9 +98,10 @@ export const Resume: React.FC = () => {
       logo: carrytLogo,
       fallbackText: 'CA',
       description: [
-        'Liderazgo de la migración de paneles legacy de AngularJS a React, mejorando rendimiento y mantenibilidad.',
-        'Desarrollo de herramientas internas de despliegue y mantenimiento con Bash scripting.',
-        'Capacitación y mentoría de desarrolladores junior, unificando prácticas y conocimientos técnicos del equipo.'
+        'Liderazgo técnico en la migración de más de 5 aplicaciones web legacy de AngularJS a React, mejorando sustancialmente el rendimiento y la mantenibilidad.',
+        'Administración y mantenimiento de infraestructura en servidores Linux con NGINX y despliegue modular en contenedores.',
+        'Implementación de suites de testing, mejores prácticas en equipo mediante GitFlow y herramientas de CI/CD para otorgar autonomía y ownership de despliegue al equipo.',
+        'Mentoría técnica y definición de estándares de desarrollo frontend para potenciar al equipo de ingeniería.'
       ],
       color: 'purple-tab'
     }
